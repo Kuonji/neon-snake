@@ -11,7 +11,7 @@ export default function LevelTransition() {
       <div className="text-center animate-slide-up">
         <h2 className="font-orbitron text-2xl sm:text-3xl font-black text-neon-cyan tracking-widest mb-2"
           style={{ textShadow: '0 0 20px #00e5ff, 0 0 40px #00e5ff' }}>
-          LEVEL UP!
+          升级!
         </h2>
         <p className="font-rajdhani text-lg text-neon-green">
           进入关卡 {levelConfig.id + 1}

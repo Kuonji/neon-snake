@@ -16,28 +16,7 @@ export default function ControlPad() {
   const pauseGame = useGameStore(s => s.pauseGame)
   const resumeGame = useGameStore(s => s.resumeGame)
 
-  if (state === 'idle') {
-    return (
-      <div className="md:hidden mt-4 flex flex-col items-center gap-3 select-none">
-        <button
-          onTouchStart={(e) => { e.preventDefault(); startGame(1) }}
-          className="font-orbitron text-base px-10 py-3.5 border-2 border-neon-green text-neon-green
-            rounded-lg active:bg-neon-green/20 active:scale-95
-            transition-all duration-200 tracking-widest touch-manipulation"
-        >
-          START
-        </button>
-        <button
-          onTouchStart={(e) => { e.preventDefault(); useGameStore.getState().showLevelSelect() }}
-          className="font-orbitron text-xs px-6 py-2 border border-neon-cyan/40 text-neon-cyan/70
-            rounded-lg active:bg-neon-cyan/20 active:scale-95
-            transition-all duration-200 tracking-widest touch-manipulation"
-        >
-          关卡选择
-        </button>
-      </div>
-    )
-  }
+  if (state === 'idle') return null
 
   if (state === 'gameover') {
     return (
@@ -48,7 +27,7 @@ export default function ControlPad() {
             rounded-lg active:bg-neon-green/20 active:scale-95
             transition-all duration-200 tracking-widest touch-manipulation"
         >
-          RETRY
+          重新开始
         </button>
       </div>
     )
@@ -61,20 +40,22 @@ export default function ControlPad() {
 
   return (
     <div className="md:hidden mt-2 w-full px-2 select-none">
-      <div className="flex items-center justify-between max-w-[400px] mx-auto">
-        <div className="flex flex-col items-center gap-1">
-          <button
-            onTouchStart={(e) => {
-              e.preventDefault()
-              if (state === 'playing') pauseGame()
-              else resumeGame()
-            }}
-            className="font-rajdhani text-xs px-4 py-1 border border-neon-yellow/30 text-neon-yellow/70
-              rounded-md active:bg-neon-yellow/20 transition-all duration-200 touch-manipulation"
-          >
-            {state === 'playing' ? '暂停' : '继续'}
-          </button>
+      <div className="flex justify-center mb-3">
+        <button
+          onTouchStart={(e) => {
+            e.preventDefault()
+            if (state === 'playing') pauseGame()
+            else resumeGame()
+          }}
+          className="font-rajdhani text-xs px-6 py-1.5 border border-neon-yellow/30 text-neon-yellow/70
+            rounded-md active:bg-neon-yellow/20 transition-all duration-200 touch-manipulation"
+        >
+          {state === 'playing' ? '暂停' : '继续'}
+        </button>
+      </div>
 
+      <div className="flex items-center justify-between max-w-[400px] mx-auto">
+        <div className="flex flex-col items-center">
           <div className="grid grid-cols-3 grid-rows-3 gap-1" style={{ width: '160px', height: '160px' }}>
             <div />
             <button

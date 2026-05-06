@@ -22,7 +22,7 @@ export default function LevelInfo() {
     <div className="flex items-center gap-2 sm:gap-3">
       <div className="flex items-center gap-1.5">
         <span className="font-orbitron text-[10px] sm:text-xs text-neon-cyan/50 tracking-widest">
-          LV.{levelConfig.id}
+          关卡{levelConfig.id}
         </span>
         <span className="font-rajdhani text-[10px] sm:text-xs text-gray-500">
           {LEVEL_TYPE_NAMES[levelConfig.type]}

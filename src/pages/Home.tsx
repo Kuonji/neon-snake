@@ -87,10 +87,13 @@ export default function Home() {
               <div className="text-center animate-slide-up">
                 <h2 className="font-orbitron text-3xl sm:text-4xl font-black text-neon-yellow tracking-widest mb-3"
                   style={{ textShadow: '0 0 20px #ffe600, 0 0 40px #ffe600' }}>
-                  PAUSED
+                  已暂停
                 </h2>
-                <p className="font-rajdhani text-sm text-gray-400">
+                <p className="font-rajdhani text-sm text-gray-400 hidden md:block">
                   按 ESC / P 或点击继续
+                </p>
+                <p className="font-rajdhani text-sm text-gray-400 md:hidden">
+                  点击继续按钮恢复游戏
                 </p>
               </div>
             </div>

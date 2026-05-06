@@ -29,7 +29,7 @@ export default function GameOverModal() {
     <div className="absolute inset-0 flex items-center justify-center z-30 bg-black/60 backdrop-blur-sm animate-fade-in">
       <div className="bg-neon-surface border-2 border-neon-pink/40 rounded-xl p-6 sm:p-8 max-w-sm w-full mx-4 border-glow-pink animate-slide-up">
         <h2 className="font-orbitron text-2xl sm:text-3xl font-black text-neon-pink text-glow-pink text-center mb-5 tracking-wider">
-          GAME OVER
+          游戏结束
         </h2>
 
         <div className="space-y-3 mb-6">
@@ -71,7 +71,7 @@ export default function GameOverModal() {
 
           {isNewHighScore && (
             <div className="text-center font-orbitron text-xs sm:text-sm text-neon-yellow animate-pulse-neon tracking-widest">
-              ★ NEW HIGH SCORE ★
+              ★ 新纪录 ★
             </div>
           )}
 
@@ -90,7 +90,7 @@ export default function GameOverModal() {
               active:bg-neon-green/20 active:scale-95
               transition-all duration-300 tracking-widest border-glow-green touch-manipulation"
           >
-            RETRY
+            重新开始
           </button>
 
           {isLevelCleared && nextUnlocked && (
@@ -101,13 +101,16 @@ export default function GameOverModal() {
                 active:bg-neon-cyan/20 active:scale-95
                 transition-all duration-300 tracking-widest touch-manipulation"
             >
-              NEXT LEVEL →
+              下一关 →
             </button>
           )}
         </div>
 
-        <p className="font-rajdhani text-xs sm:text-sm text-gray-500 text-center mt-3">
-          按空格键 / 点击按钮重新开始
+        <p className="font-rajdhani text-xs sm:text-sm text-gray-500 text-center mt-3 hidden md:block">
+          按空格键重新开始
+        </p>
+        <p className="font-rajdhani text-xs sm:text-sm text-gray-500 text-center mt-3 md:hidden">
+          点击按钮重新开始
         </p>
       </div>
     </div>

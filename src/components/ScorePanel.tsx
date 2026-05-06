@@ -15,7 +15,7 @@ export default function ScorePanel() {
       <div className="flex items-center gap-3 sm:gap-6">
         <div>
           <div className="text-[10px] sm:text-xs text-neon-green/50 uppercase tracking-widest font-orbitron">
-            Score
+            得分
           </div>
           <div className="font-orbitron text-lg sm:text-2xl font-bold text-neon-green text-glow-green">
             {String(score).padStart(4, '0')}
@@ -34,7 +34,7 @@ export default function ScorePanel() {
 
         <div>
           <div className="text-[10px] sm:text-xs text-neon-pink/50 uppercase tracking-widest font-orbitron">
-            Best
+            最高
           </div>
           <div className="font-orbitron text-lg sm:text-2xl font-bold text-neon-pink text-glow-pink">
             {String(highScore).padStart(4, '0')}
@@ -45,7 +45,7 @@ export default function ScorePanel() {
       <div className="flex items-center gap-2 sm:gap-4">
         <div className="text-right">
           <div className="text-[10px] sm:text-xs text-neon-cyan/50 uppercase tracking-widest font-orbitron">
-            Level
+            关卡
           </div>
           <div className="font-orbitron text-lg sm:text-2xl font-bold text-neon-cyan text-glow-cyan">
             {level}/{MAX_LEVEL}
@@ -54,7 +54,7 @@ export default function ScorePanel() {
 
         <div className="w-14 sm:w-20 hidden sm:block">
           <div className="text-xs text-gray-500 uppercase tracking-widest font-orbitron mb-1">
-            Speed
+            速度
           </div>
           <div className="h-1.5 bg-neon-surface rounded-full overflow-hidden">
             <div
@@ -66,7 +66,7 @@ export default function ScorePanel() {
 
         {state === 'paused' && (
           <div className="font-orbitron text-xs sm:text-sm text-neon-yellow animate-pulse-neon tracking-widest">
-            PAUSED
+            已暂停
           </div>
         )}
       </div>

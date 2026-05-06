@@ -20,14 +20,17 @@ export default function StartScreen() {
           <p className="font-rajdhani text-base sm:text-lg text-neon-green/70 tracking-wide">
             在数字矩阵中穿行，吞噬能量粒子
           </p>
-          <p className="font-rajdhani text-xs sm:text-sm text-gray-500">
-            方向键 / WASD 控制方向 &middot; ESC 暂停
+          <p className="font-rajdhani text-xs sm:text-sm text-gray-500 hidden md:block">
+            方向键 / WASD 控制方向 · ESC 暂停
           </p>
-          <p className="font-rajdhani text-xs sm:text-sm text-gray-500">
-            Q 火球 &middot; E 幽灵 &middot; R 磁力爆发 &middot; F 减速
+          <p className="font-rajdhani text-xs sm:text-sm text-gray-500 hidden md:block">
+            Q 火球 · E 幽灵 · R 磁力爆发 · F 减速
           </p>
           <p className="font-rajdhani text-xs sm:text-sm text-gray-500 md:hidden">
-            滑动屏幕或使用方向键控制
+            滑动屏幕或使用方向键控制方向
+          </p>
+          <p className="font-rajdhani text-xs sm:text-sm text-gray-500 md:hidden">
+            点击技能按钮释放技能
           </p>
         </div>
 
@@ -39,7 +42,7 @@ export default function StartScreen() {
               active:bg-neon-green/20 active:scale-95
               transition-all duration-300 tracking-widest border-glow-green touch-manipulation"
           >
-            START GAME
+            开始游戏
           </button>
 
           <button
@@ -49,12 +52,15 @@ export default function StartScreen() {
               active:bg-neon-cyan/20 active:scale-95
               transition-all duration-300 tracking-widest touch-manipulation"
           >
-            SELECT LEVEL
+            关卡选择
           </button>
         </div>
 
-        <p className="font-rajdhani text-xs sm:text-sm text-neon-green/40 mt-5 animate-blink">
-          按空格键 / 点击按钮开始
+        <p className="font-rajdhani text-xs sm:text-sm text-neon-green/40 mt-5 animate-blink hidden md:block">
+          按空格键开始
+        </p>
+        <p className="font-rajdhani text-xs sm:text-sm text-neon-green/40 mt-5 animate-blink md:hidden">
+          点击按钮开始
         </p>
       </div>
     </div>
