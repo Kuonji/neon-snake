@@ -6,6 +6,7 @@ export default function ScorePanel() {
   const level = useGameStore(s => s.level)
   const speed = useGameStore(s => s.speed)
   const state = useGameStore(s => s.state)
+  const combo = useGameStore(s => s.combo)
 
   const speedPercent = ((BASE_SPEED - speed) / (BASE_SPEED - MIN_SPEED)) * 100
 
@@ -20,6 +21,14 @@ export default function ScorePanel() {
             {String(score).padStart(4, '0')}
           </div>
         </div>
+
+        {combo.count > 1 && (
+          <div className="px-1.5 py-0.5 rounded bg-neon-yellow/10 border border-neon-yellow/30">
+            <span className="font-orbitron text-xs sm:text-sm text-neon-yellow animate-pulse-neon">
+              x{combo.multiplier.toFixed(1)}
+            </span>
+          </div>
+        )}
 
         <div className="w-px h-6 sm:h-8 bg-neon-green/20" />
 

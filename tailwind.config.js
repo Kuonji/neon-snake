@@ -30,6 +30,7 @@ export default {
         'flicker': 'flicker 3s linear infinite',
         'slide-up': 'slideUp 0.3s ease-out',
         'fade-in': 'fadeIn 0.3s ease-out',
+        'skill-pulse': 'skillPulse 1.5s ease-in-out infinite',
       },
       keyframes: {
         pulseNeon: {
@@ -51,6 +52,10 @@ export default {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        skillPulse: {
+          '0%, 100%': { boxShadow: '0 0 8px rgba(0,255,136,0.2), inset 0 0 4px rgba(0,255,136,0.1)' },
+          '50%': { boxShadow: '0 0 20px rgba(0,255,136,0.5), inset 0 0 8px rgba(0,255,136,0.2)' },
         },
       },
     },
