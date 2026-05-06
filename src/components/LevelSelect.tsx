@@ -29,7 +29,7 @@ export default function LevelSelect() {
       <div className="bg-neon-surface border-2 border-neon-green/30 rounded-xl p-4 sm:p-6 max-w-lg w-full mx-4 max-h-[80vh] overflow-y-auto animate-slide-up">
         <div className="flex items-center justify-between mb-4">
           <h2 className="font-orbitron text-xl sm:text-2xl font-black text-neon-green text-glow-green tracking-wider">
-            SELECT LEVEL
+            关卡选择
           </h2>
           <button
             onClick={hideLevelSelect}
@@ -63,7 +63,7 @@ export default function LevelSelect() {
                     {config.id}
                   </span>
                   {isCompleted && (
-                    <span className="text-neon-yellow text-xs font-orbitron">✓ CLEAR</span>
+                    <span className="text-neon-yellow text-xs font-orbitron">✓ 通关</span>
                   )}
                   {!isUnlocked && (
                     <span className="text-gray-600 text-xs">🔒</span>

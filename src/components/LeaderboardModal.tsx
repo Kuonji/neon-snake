@@ -23,7 +23,7 @@ export default function LeaderboardModal() {
           <div className="bg-neon-surface border-2 border-neon-cyan/30 rounded-xl p-6 max-w-sm w-full mx-4 animate-slide-up">
             <div className="flex justify-between items-center mb-6">
               <h2 className="font-orbitron text-xl font-bold text-neon-cyan text-glow-cyan tracking-wider">
-                LEADERBOARD
+                排行榜
               </h2>
               <button
                 onClick={() => setIsOpen(false)}
@@ -65,7 +65,7 @@ export default function LeaderboardModal() {
                       {record.score}
                     </span>
                     <span className="font-rajdhani text-neon-cyan">
-                      Lv.{record.level}
+                      关卡{record.level}
                     </span>
                     <span className="font-rajdhani text-gray-400 text-sm">
                       {record.date}
